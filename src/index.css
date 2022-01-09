@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@400;500;600;700&display=swap");
+:root {
+  --raisin-black: rgba(24, 31, 41, 0.8);
+  --raisin-black-transparent: rgba(24, 31, 41, 0.6);
+  --space-cadet: rgb(28, 40, 75);
+  --queen-blue: rgb(88, 113, 144);
+  --queen-blue-transparent: rgba(88, 113, 144, 0.4);
+  --beau-blue: rgb(184, 206, 223);
+  --candy-pink: rgb(233, 96, 106);
+  --candy-pink-transparent: rgba(233, 96, 106, 0.7);
+  --candy-pink-light: rgb(233, 131, 138);
+  /* =================================== */
+  --baby-powder: rgb(250, 253, 246);
+  --baby-powder-light: rgba(250, 253, 246, 0.4);
+  --button-close: #6d0a02;
+  --button-hover: #af1406;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  box-sizing: border-box;
+  font-family: "Expletus Sans", cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url(./img/lightmode.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.is-dark-mode {
+  --raisin-black: rgba(24, 31, 41, 0.8);
+  --raisin-black-transparent: rgba(24, 31, 41, 0.8);
+  --candy-pink-light: rgba(111, 228, 218, 0.849);
+  --turquoise: rgba(111, 228, 218, 0.849);
+  background-image: url(./img/darkmode.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.3s;
+  will-change: transform;
+}
+
+.is-light-mode {
+  --raisin-black: rgba(24, 31, 41, 0.8);
+  --raisin-black-transparent: rgba(24, 31, 41, 0.6);
+  --space-cadet: rgb(28, 40, 75);
+  --queen-blue: rgb(88, 113, 144, 0.2);
+  --queen-blue-transparent: rgba(88, 113, 144, 0.253);
+  --beau-blue: rgb(184, 206, 223);
+  --candy-pink: rgb(233, 96, 106);
+  --candy-pink-transparent: rgba(233, 96, 106, 0.7);
+  --candy-pink-light: rgb(233, 131, 138);
+  --turquoise: rgb(233, 96, 106);
+  transition: 0.3s;
+  will-change: transform;
+}

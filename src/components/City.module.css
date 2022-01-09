@@ -1,0 +1,26 @@
+.city {
+  margin: 3rem auto;
+  width: 60%;
+  border-radius: 1.2rem;
+  color: var(--baby-powder);
+  background-color: var(--raisin-black-transparent);
+  box-shadow: 0 0 2rem var(--raisin-black);
+}
+
+.name {
+  padding: 20px;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+  background-color: var(--candy-pink-transparent);
+}
+
+.info {
+  padding: 20px;
+}
+
+@media (max-width: 640px) {
+  .city {
+    width: 90%;
+  }
+}
+

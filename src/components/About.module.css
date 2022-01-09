@@ -1,0 +1,32 @@
+.about {
+  margin: 40px auto;
+  width: 90%;
+  border-radius: 1.2rem;
+  max-width: 60rem;
+  color: var(--baby-powder);
+  background-color: var(--raisin-black-transparent);
+  box-shadow: 0 0 2rem var(--raisin-black);
+}
+
+.name {
+  padding: 20px;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+  background-color: var(--candy-pink-transparent);
+}
+
+.parr {
+  padding: 20px;
+}
+
+@media (max-width: 640px) {
+  .about {
+    width: 90%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+ .about {
+    box-shadow: 0 0 2rem #000;
+  }
+}
