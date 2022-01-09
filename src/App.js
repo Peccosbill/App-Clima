@@ -10,7 +10,9 @@ const apiKey = "b1acfe62d9fb54ae7d2d923cf13cf6d5";
 
 export default function App() {
   const [cities, setCities] = useState([]);
-  //=====================================================
+
+
+  //=========================================
   // TRAER LA CARD CON LOS DATOS DEL CLIMA DE NUESTRA UBICACIÓN
   useEffect(() => {
     // >>>>>>>> LE PEDIMOS PERMISO AL USUARIO PARA ACCEDER A SU UBICACIÓN GEOGRAFICA <<<<<<<<<<<<<<<
@@ -53,7 +55,7 @@ export default function App() {
     }
   }, []); //SOLO SE EJECUTARÁ AL RECARGAR LA PÁGINA
 
-  // ==========================================================
+  // ========================================
 
   function onClose(id) {
     setCities((oldCities) => oldCities.filter((c) => c.id !== id));
@@ -104,6 +106,7 @@ export default function App() {
         }
       });
   }
+
   function onFilter(cityId) {
     let city = cities.filter((c) => c.id === parseInt(cityId));
     if (city.length > 0) {
@@ -112,6 +115,7 @@ export default function App() {
       return null;
     }
   }
+
   return (
     <div className={styles.App}>
       <Route path={"/"} render={() => <Nav onSearch={onSearch} />} />
