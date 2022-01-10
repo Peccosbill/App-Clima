@@ -26,7 +26,7 @@ function HandleSwitch({ checked, onChange, id }) {
         Switch
       </label>
       <div className={styles.sunMoon}>
-        {!checked && (
+        {checked && (
           <img
             src={sun}
             height={30}
@@ -36,7 +36,7 @@ function HandleSwitch({ checked, onChange, id }) {
             alt="sun"
           />
         )}
-        {checked && (
+        {!checked && (
           <img
             src={moon}
             height={30}

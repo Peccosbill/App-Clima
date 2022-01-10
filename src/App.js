@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
+import { Route } from "react-router-dom";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 import styles from "./App.module.css";
 import Nav from "./components/Nav.jsx";
 import About from "./components/About.jsx";
 import Cards from "./components/Cards.jsx";
 import City from "./components/City.jsx";
-import { Route } from "react-router-dom";
 
 const apiKey = "b1acfe62d9fb54ae7d2d923cf13cf6d5";
 
 export default function App() {
   const [cities, setCities] = useState([]);
-
+  const MySwal = withReactContent(Swal);
 
   //=========================================
   // TRAER LA CARD CON LOS DATOS DEL CLIMA DE NUESTRA UBICACIÓN
@@ -57,10 +59,6 @@ export default function App() {
 
   // ========================================
 
-  function onClose(id) {
-    setCities((oldCities) => oldCities.filter((c) => c.id !== id));
-  }
-
   function onSearch(city) {
     //Llamado a la API del clima
     fetch(
@@ -102,9 +100,23 @@ export default function App() {
 
           // alert("Ciudad duplicada");
         } else {
-          alert("Ciudad no encontrada");
+          return MySwal.fire({
+            title: "No se ha encontrado la ciudad",
+            icon: "error",
+            confirmButtonText: "OK",
+            backdrop: `
+              rgba(0,0,123,0.4)
+              url("/images/nyan-cat.gif")
+              left top
+              no-repeat
+            `,
+          });
         }
       });
+  }
+
+  function onClose(id) {
+    setCities((oldCities) => oldCities.filter((c) => c.id !== id));
   }
 
   function onFilter(cityId) {
@@ -126,6 +138,7 @@ export default function App() {
         render={() => <Cards cities={cities} onClose={onClose} />}
       />
       <Route
+        exact
         path={"/city/:cityId"}
         render={({ match }) => <City city={onFilter(match.params.cityId)} />}
       />
