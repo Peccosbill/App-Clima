@@ -3,9 +3,11 @@ Aplicación Web One Page donde se puede buscar por nombre de ciudad y donde se m
 
 ## Librerías utilizadas
 
-♦ React
+♠ React
 
-♠ React router
+♦ React router
+
+♣ SweetAlert 2
 
 ## ♥ Light Mode
 
