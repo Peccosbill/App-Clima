@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Route } from "react-router-dom";
+import { Redirect, Route } from "react-router-dom";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import styles from "./App.module.css";
@@ -7,6 +7,7 @@ import Nav from "./components/Nav.jsx";
 import About from "./components/About.jsx";
 import Cards from "./components/Cards.jsx";
 import City from "./components/City.jsx";
+import Error404 from "./components/Error404.jsx";
 
 const apiKey = "b1acfe62d9fb54ae7d2d923cf13cf6d5";
 
@@ -142,6 +143,8 @@ export default function App() {
         path={"/city/:cityId"}
         render={({ match }) => <City city={onFilter(match.params.cityId)} />}
       />
+      <Route path="/404" component={Error404} />
+      <Redirect from="*" to="/404" />
     </div>
   );
 }
