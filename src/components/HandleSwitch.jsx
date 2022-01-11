@@ -1,6 +1,6 @@
 import React from "react";
 import "animate.css";
-import styles from "./HandleSwitch.module.css";
+import styles from "./css/HandleSwitch.module.css";
 import sun from "../img/sun.png";
 import moon from "../img/moon.png";
 

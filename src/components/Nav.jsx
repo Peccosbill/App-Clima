@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../img/logoRainbow.png";
 import SearchBar from "./SearchBar.jsx";
-import styles from "./Nav.module.css";
+import styles from "./css/Nav.module.css";
 import { NavLink } from "react-router-dom";
 import HandleSwitch from "./HandleSwitch";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Card.module.css";
+import styles from "./css/Card.module.css";
 import { NavLink } from "react-router-dom";
 
 export default function Card({ temp, clouds, wind, name, img, onClose, id }) {

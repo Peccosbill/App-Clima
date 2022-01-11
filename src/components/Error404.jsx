@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Error404.module.css";
+import styles from "./css/Error404.module.css";
 import img404 from "../img/error404.gif";
 
 function Error404() {

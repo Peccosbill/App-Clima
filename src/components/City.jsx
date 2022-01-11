@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./City.module.css";
+import styles from "./css/City.module.css";
 
 export default function City({ city }) {
   if (!city) {
