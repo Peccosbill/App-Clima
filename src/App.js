@@ -87,7 +87,18 @@ export default function App() {
           //   return setCities((oldCities) => [...oldCities, city]);
           // }
           if (cities.find((e) => e.id === city.id)) {
-            alert(`Ciudad ${city.name} duplicada`);
+            return MySwal.fire({
+              title: `Ciudad ${city.name} duplicada`,
+              icon: "error",
+              confirmButtonText: "OK",
+              backdrop: `
+              rgba(0,0,123,0.4)
+              url("/images/nyan-cat.gif")
+              left top
+              no-repeat
+            `,
+            });
+            // alert(`Ciudad ${city.name} duplicada`);
           } else {
             return setCities((oldCities) => [...oldCities, city]);
           }
