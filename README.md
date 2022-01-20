@@ -11,11 +11,12 @@ Aplicación Web One Page donde se puede buscar por nombre de ciudad y donde se m
 
 ## ♥ Light Mode
 
-![Captura de pantalla 2022-01-08 193805](https://user-images.githubusercontent.com/91910994/148665682-ad310ae0-15ab-4489-8d74-36d263c929f9.png)
+![image](https://user-images.githubusercontent.com/91910994/150370147-d4154032-b9f3-4776-a4e4-5272d86c9aad.png)
+
 
 ## ♣ Dark Mode
 
-![Captura de pantalla 2022-01-08 193732](https://user-images.githubusercontent.com/91910994/148665698-374e44f7-a1ec-4f2d-bca6-b2c62ce4733c.png)
+![image](https://user-images.githubusercontent.com/91910994/150370265-bd9a46ea-b5f1-45a9-890b-6eed99725802.png)
 
 
 # Getting Started with Create React App
@@ -23,6 +24,8 @@ Aplicación Web One Page donde se puede buscar por nombre de ciudad y donde se m
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+
+### `npm install`
 
 In the project directory, you can run:
 
