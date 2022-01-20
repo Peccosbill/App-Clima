@@ -21,7 +21,7 @@ export default function About() {
   }
 
   return (
-    <div className={styles.about}>
+    <div className={`${styles.about} ${"animate__animated animate__flipInX"}`}>
       <h4 className={styles.name}>Mi nombre es Jonathan</h4>
       <p className={styles.parr}>
         Estoy estudiando desarrollo Web hace un tiempo. La verdad que empece por
