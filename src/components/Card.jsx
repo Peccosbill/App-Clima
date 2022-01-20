@@ -2,7 +2,16 @@ import React from "react";
 import styles from "./css/Card.module.css";
 import { NavLink } from "react-router-dom";
 
-export default function Card({ temp, clouds, wind, name, img, onClose, id }) {
+export default function Card({
+  name,
+  country,
+  temp,
+  description,
+  wind,
+  img,
+  onClose,
+  id,
+}) {
   return (
     <div className={styles.card}>
       <div className={styles.cityName}>
@@ -14,13 +23,13 @@ export default function Card({ temp, clouds, wind, name, img, onClose, id }) {
           className={styles.city}
           style={{ textDecoration: "none" }}
         >
-          <h5 className={styles.name}>{name}</h5>
+          <h5 className={styles.name}>{`${name}, ${country}`}</h5>
         </NavLink>
       </div>
       <div className={styles.temperature}>
         <p className={styles.temp}>{temp}°</p>
         <div className={styles.extraData}>
-          <p>Clouds: {clouds}%</p>
+          <p>{description.charAt(0).toUpperCase() + description.slice(1)}</p>
           <p>Wind: {wind}km</p>
         </div>
       </div>

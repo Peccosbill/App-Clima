@@ -25,8 +25,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url(./img/lightmode.jpg);
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
-  background-image: center;
+  /* backdrop-filter: blur(5px); */
 }
 
 code {
@@ -41,12 +42,13 @@ code {
   --turquoise: rgba(111, 228, 218, 0.849);
   background-image: url(./img/darkmode.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-attachment: fixed;
   transition: 2s;
   will-change: transform;
 }
 
 .is-light-mode {
+  --baby-powder-light: rgba(250, 253, 246, 0.7);
   --raisin-black: rgba(24, 31, 41, 0.8);
   --raisin-black-transparent: rgba(24, 31, 41, 0.6);
   --space-cadet: rgb(28, 40, 75);

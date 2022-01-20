@@ -9,7 +9,7 @@ import Cards from "./components/Cards.jsx";
 import City from "./components/City.jsx";
 import Error404 from "./components/Error404.jsx";
 
-const apiKey = "b1acfe62d9fb54ae7d2d923cf13cf6d5";
+const apiKey = "7600e3c0488090ddc219f6772ad9f223";
 
 export default function App() {
   const [cities, setCities] = useState([]);
@@ -33,15 +33,18 @@ export default function App() {
             .then((recurso) => {
               if (recurso.main !== undefined) {
                 const city = {
+                  id: recurso.id,
+                  img: recurso.weather[0].icon,
+                  weather: recurso.weather[0].main,
+                  description: recurso.weather[0].description,
                   min: Math.round(recurso.main.temp_min),
                   max: Math.round(recurso.main.temp_max),
-                  img: recurso.weather[0].icon,
-                  id: recurso.id,
-                  wind: recurso.wind.speed,
                   temp: recurso.main.temp,
+                  feels_like: recurso.main.feels_like,
+                  humidity: recurso.main.humidity,
+                  wind: recurso.wind.speed,
                   name: recurso.name,
                   country: recurso.sys.country,
-                  weather: recurso.weather[0].main,
                   clouds: recurso.clouds.all,
                   latitud: recurso.coord.lat,
                   longitud: recurso.coord.lon,
@@ -69,15 +72,18 @@ export default function App() {
       .then((recurso) => {
         if (recurso.main !== undefined) {
           const city = {
+            id: recurso.id,
+            img: recurso.weather[0].icon,
+            description: recurso.weather[0].description,
+            weather: recurso.weather[0].main,
             min: Math.round(recurso.main.temp_min),
             max: Math.round(recurso.main.temp_max),
-            img: recurso.weather[0].icon,
-            id: recurso.id,
-            wind: recurso.wind.speed,
             temp: recurso.main.temp,
+            feels_like: recurso.main.feels_like,
+            humidity: recurso.main.humidity,
+            wind: recurso.wind.speed,
             name: recurso.name,
             country: recurso.sys.country,
-            weather: recurso.weather[0].main,
             clouds: recurso.clouds.all,
             latitud: recurso.coord.lat,
             longitud: recurso.coord.lon,

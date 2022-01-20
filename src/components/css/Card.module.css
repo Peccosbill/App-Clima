@@ -96,10 +96,11 @@
 }
 
 .weather {
-  background-color: var(--queen-blue);
+  background-color: var(--raisin-black);
   border-radius: 1rem;
 }
 
+/* - - - - - RESPONSIVE - - - - - -  */
 @media (max-width: 640px) {
   .card {
     margin: 20px;
@@ -109,4 +110,3 @@
     transform: scale(1, 1);
   }
 }
-

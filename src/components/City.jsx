@@ -8,14 +8,26 @@ export default function City({ city }) {
   }
   return (
     <div className={styles.city}>
-      <h2 className={styles.name}>{`${city.name}, ${city.country}`}</h2>
+      <div className={styles.name}>
+        <h2>{`${city.name}, ${city.country}`}</h2>
+      </div>
       <div className={styles.info}>
-        <div>Temperatura: {city.temp} ºC</div>
-        <div>Clima: {city.weather}</div>
-        <div>Viento: {city.wind} km/h</div>
-        <div>Cantidad de nubes: {city.clouds}</div>
-        <div>Latitud: {city.latitud}º</div>
-        <div>Longitud: {city.longitud}º</div>
+        <div className={styles.uno}>Temperature: {city.temp} ºC</div>
+        <div className={styles.dos}>Max: {city.max}</div>
+        <div className={styles.tres}>Min: {city.min}</div>
+        <div className={styles.cuatro}>Weather: {city.weather}</div>
+        <div className={styles.cinco}>Humidity: {city.humidity}%</div>
+        <div className={styles.seis}>Wind: {city.wind} km/h</div>
+        <div className={styles.siete}>Clouds: {city.clouds}</div>
+        <div className={styles.ocho}>Latitude: {city.latitud}º</div>
+        <div className={styles.nueve}>Longitude: {city.longitud}º</div>
+      </div>
+      <div className={styles.imgCity}>
+        <img
+          src={`http://openweathermap.org/img/wn/${city.img}@2x.png`}
+          alt="Img Weather"
+          width={200}
+        />
       </div>
     </div>
   );
