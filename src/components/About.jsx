@@ -62,7 +62,7 @@ export default function About() {
           onClick={onChecked}
           className={styles.imgContact}
           src={mail}
-          alt="Github"
+          alt="Mail"
           width={60}
         />
       </div>
