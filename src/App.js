@@ -89,9 +89,6 @@ export default function App() {
             longitud: recurso.coord.lon,
           };
 
-          // if (!cities.length) {
-          //   return setCities((oldCities) => [...oldCities, city]);
-          // }
           if (cities.find((e) => e.id === city.id)) {
             return MySwal.fire({
               title: `Ciudad ${city.name} duplicada`,
@@ -103,20 +100,10 @@ export default function App() {
               left top
               no-repeat
             `,
-            });
-            // alert(`Ciudad ${city.name} duplicada`);
+            });   
           } else {
             return setCities((oldCities) => [...oldCities, city]);
           }
-
-          // let encontrado = false;
-          // for (let i = 0; i < cities.length; i++) {
-          //   if (cities[i].id === city.id) {
-          //     encontrado = true;
-          //   }
-          // }
-
-          // alert("Ciudad duplicada");
         } else {
           return MySwal.fire({
             title: "No se ha encontrado la ciudad",
@@ -165,18 +152,3 @@ export default function App() {
   );
 }
 
-// <div className={styles.App}>
-//   <Routes>
-//     <Route path={"/"} element={() => <Nav onSearch={onSearch} />} />
-//     <Route exact path={"/about"} element={About} />
-//     <Route
-//       exact
-//       path="/"
-//       element={() => <Cards cities={cities} onClose={onClose} />}
-//     />
-//     <Route
-//       path={"/city/:cityId"}
-//       element={({ match }) => <City city={onFilter(match.params.cityId)} />}
-//     />
-//   </Routes>
-// </div>;

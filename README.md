@@ -3,11 +3,13 @@ Aplicación Web One Page donde se puede buscar por nombre de ciudad y donde se m
 
 ## Librerías utilizadas
 
-♠ React
+♦ React
 
 ♦ React router
 
-♣ SweetAlert 2
+♦ SweetAlert 2
+
+♦ Animate.css
 
 ## ♥ Light Mode
 
@@ -17,6 +19,10 @@ Aplicación Web One Page donde se puede buscar por nombre de ciudad y donde se m
 ## ♣ Dark Mode
 
 ![image](https://user-images.githubusercontent.com/91910994/150370265-bd9a46ea-b5f1-45a9-890b-6eed99725802.png)
+
+## ♠ Información extra de cada Ciudad
+
+![image](https://user-images.githubusercontent.com/91910994/150404456-1f59f19f-8fc3-445b-9d81-d1f2c5c8a49e.png)
 
 
 # Getting Started with Create React App
