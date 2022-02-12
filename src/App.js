@@ -7,7 +7,6 @@ import Nav from "./components/Nav.jsx";
 import About from "./components/About.jsx";
 import Cards from "./components/Cards.jsx";
 import City from "./components/City.jsx";
-import Error404 from "./components/Error404.jsx";
 
 const apiKey = "7600e3c0488090ddc219f6772ad9f223";
 
@@ -147,7 +146,6 @@ export default function App() {
         path={"/city/:cityId"}
         render={({ match }) => <City city={onFilter(match.params.cityId)} />}
       />
-      <Route path="*" component={Error404} />
     </div>
   );
 }
