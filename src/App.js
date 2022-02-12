@@ -16,49 +16,49 @@ export default function App() {
 
   //=========================================
   // TRAER LA CARD CON LOS DATOS DEL CLIMA DE NUESTRA UBICACIÓN
-  useEffect(() => {
-    // >>>>>>>> LE PEDIMOS PERMISO AL USUARIO PARA ACCEDER A SU UBICACIÓN GEOGRAFICA <<<<<<<<<<<<<<<
-    if (navigator.geolocation) {
-      //SI ACEPTA, OBTENEMOS SUS COORDENADAS
-      const success = function (position) {
-        const latitude = position.coords.latitude;
-        const longitude = position.coords.longitude;
-        function weatherLocation() {
-          //LLAMAMOS A LA API PIDIENDOLE LA CIUDAD CON ESAS COORDENADAS Y EXTRAEMOS SUS DATOS PARA LA "CARD"
-          fetch(
-            `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`
-          )
-            .then((r) => r.json())
-            .then((recurso) => {
-              if (recurso.main !== undefined) {
-                const city = {
-                  id: recurso.id,
-                  img: recurso.weather[0].icon,
-                  weather: recurso.weather[0].main,
-                  description: recurso.weather[0].description,
-                  min: Math.round(recurso.main.temp_min),
-                  max: Math.round(recurso.main.temp_max),
-                  temp: recurso.main.temp,
-                  feels_like: recurso.main.feels_like,
-                  humidity: recurso.main.humidity,
-                  wind: recurso.wind.speed,
-                  name: recurso.name,
-                  country: recurso.sys.country,
-                  clouds: recurso.clouds.all,
-                  latitud: recurso.coord.lat,
-                  longitud: recurso.coord.lon,
-                };
-                return setCities((oldCities) => [...oldCities, city]); //SI LA CIUDAD EXISTE, ES AGREGADA A NUESTRO ESTADO DE CITIES
-              }
-            });
-        }
-        weatherLocation();
-      };
-      navigator.geolocation.getCurrentPosition(success, function (msg) {
-        console.error(msg);
-      });
-    }
-  }, []); //SOLO SE EJECUTARÁ AL RECARGAR LA PÁGINA
+//   useEffect(() => {
+//     // >>>>>>>> LE PEDIMOS PERMISO AL USUARIO PARA ACCEDER A SU UBICACIÓN GEOGRAFICA <<<<<<<<<<<<<<<
+//     if (navigator.geolocation) {
+//       //SI ACEPTA, OBTENEMOS SUS COORDENADAS
+//       const success = function (position) {
+//         const latitude = position.coords.latitude;
+//         const longitude = position.coords.longitude;
+//         function weatherLocation() {
+//           //LLAMAMOS A LA API PIDIENDOLE LA CIUDAD CON ESAS COORDENADAS Y EXTRAEMOS SUS DATOS PARA LA "CARD"
+//           fetch(
+//             `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`
+//           )
+//             .then((r) => r.json())
+//             .then((recurso) => {
+//               if (recurso.main !== undefined) {
+//                 const city = {
+//                   id: recurso.id,
+//                   img: recurso.weather[0].icon,
+//                   weather: recurso.weather[0].main,
+//                   description: recurso.weather[0].description,
+//                   min: Math.round(recurso.main.temp_min),
+//                   max: Math.round(recurso.main.temp_max),
+//                   temp: recurso.main.temp,
+//                   feels_like: recurso.main.feels_like,
+//                   humidity: recurso.main.humidity,
+//                   wind: recurso.wind.speed,
+//                   name: recurso.name,
+//                   country: recurso.sys.country,
+//                   clouds: recurso.clouds.all,
+//                   latitud: recurso.coord.lat,
+//                   longitud: recurso.coord.lon,
+//                 };
+//                 return setCities((oldCities) => [...oldCities, city]); //SI LA CIUDAD EXISTE, ES AGREGADA A NUESTRO ESTADO DE CITIES
+//               }
+//             });
+//         }
+//         weatherLocation();
+//       };
+//       navigator.geolocation.getCurrentPosition(success, function (msg) {
+//         console.error(msg);
+//       });
+//     }
+//   }, []); //SOLO SE EJECUTARÁ AL RECARGAR LA PÁGINA
 
   // ========================================
 
