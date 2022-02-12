@@ -160,8 +160,7 @@ export default function App() {
         path={"/city/:cityId"}
         render={({ match }) => <City city={onFilter(match.params.cityId)} />}
       />
-      <Route path="/404" component={Error404} />
-      <Redirect from="*" to="/404" />
+      <Route path="*" component={Error404} />
     </div>
   );
 }
