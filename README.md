@@ -1,5 +1,6 @@
 # App-Clima *Air Balloon Weather*
-Aplicación Single Page Application donde se puede buscar por nombre de ciudad y donde se muestra el clima actual de ella con algunos datos extras.
+
+Single Page Application donde se puede buscar por nombre de ciudad y donde se muestra el clima actual de ella con algunos datos extras.
 
 ## Librerías utilizadas
 
